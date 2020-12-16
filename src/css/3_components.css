@@ -1,0 +1,21 @@
+.title {
+    text-align: center;
+}
+
+#slideshow {
+    cursor: pointer;
+}
+
+.slide {
+    margin: auto;
+    width: 80vw;
+    display: none;
+}
+
+.slide[data-index="0"] {
+    display: block;
+}
+
+.slide__image {
+    width: 100%;
+}

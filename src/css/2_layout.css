@@ -1,0 +1,13 @@
+.slide__container {
+    position: relative;
+    display: block;
+    overflow-x: scroll;
+}
+
+.card__container {
+    margin: 5%;
+    padding: 10%;
+    text-align: center;
+    border-radius: 2em;
+    box-shadow: 5px 5px 14px 0 var(--winter-primary-shadow)
+}
