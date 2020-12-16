@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Github User Search</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="View some breathtaking seasonal images and look up your favourite Github users"
+    />
+    <meta name="keywords" content="slideshow, Github, users, repositories" />
+    <meta name="author" content="Robin Jiménez" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./src/css/main.css">
+  </head>
+  <template id="user">
+    <div class="user-profile">
+      <h2 id="user-login"></h2>
+      <h3 id="user-name"></h3>
+      <p id="user-location"></p>
+      <p id="user-followers"></p>
+      <div id="user-public-repos"></div>
+    </div>
+  </template>
+  <body>
+    <h1 class="title">Github User Search</h1>
+    <section id="slideshow" class="slide__container">
+      <div class="slide" data-index="0">
+        <img
+          class="slide__image"
+          srcset="
+            ../assets/img/winter/winter-landscape_sm.jpg  640w,
+            ../assets/img/winter/winter-landscape_md.jpg 1920w,
+            ../assets/img/winter/winter-landscape_lg.jpg 2400w
+          "
+          src="../assets/img/winter/winter-landscape_sm.jpg"
+          alt="Mittelberg Landscape"
+          loading="lazy"
+        />
+        <h2 class="slide_title">Mittelberg landscape</h2>
+        <h3 class="slide_subtitle">Mike Kotsch</h3>
+      </div>
+      <div class="slide" data-index="1">
+        <img
+          class="slide__image"
+          srcset="
+            ../assets/img/spring/spring-grass_sm.jpg  640w,
+            ../assets/img/spring/spring-grass_md.jpg 1920w,
+            ../assets/img/spring/spring-grass_lg.jpg 2400w
+          "
+          src="../assets/img/spring/spring-grass_sm.jpg"
+          alt="Dandilions"
+          loading="lazy"
+        />
+        <h2 class="slide_title">Dandilions</h2>
+        <h3 class="slide_subtitle">Zosia Korcz</h3>
+      </div>
+      <div class="slide" data-index="2">
+        <img
+          class="slide__image"
+          srcset="
+            ../assets/img/summer/summer-glasses_sm.jpg  640w,
+            ../assets/img/summer/summer-glasses_md.jpg 1920w,
+            ../assets/img/summer/summer-glasses_lg.jpg 2400w
+          "
+          src="../assets/img/summer/summer-glasses_sm.jpg"
+          alt="Rayban sunglasses on sand"
+          loading="lazy"
+        />
+        <h2 class="slide_title">RayBan sunglasses</h2>
+        <h3 class="slide_subtitle">Ethan Robertson</h3>
+      </div>
+      <div class="slide" data-index="3">
+        <img
+          class="slide__image"
+          srcset="
+            ../assets/img/autumn/autumn-leaves_sm.jpg  640w,
+            ../assets/img/autumn/autumn-leaves_md.jpg 1920w,
+            ../assets/img/autumn/autumn-leaves_lg.jpg 2400w
+          "
+          src="../assets/img/autumn/autumn-leaves_sm.jpg"
+          alt="Maple leaves"
+          loading="lazy"
+        />
+        <h2 class="slide_title">Maple Leaves</h2>
+        <h3 class="slide_subtitle">Timothy Eberly</h3>
+      </div>
+    </section>
+    <section id="github-search" class="card__container">
+      <form id="search-form" class="github-search__form">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" />
+        <button type="submit">Search</button>
+      </form>
+      <div id="search-results">
+        <p class="github-search__message">
+          Search for your favourite Github user
+        </p>
+      </div>
+    </section>
+  </body>
+  <script type="module" src="./src/app.js"></script>
+</html>
