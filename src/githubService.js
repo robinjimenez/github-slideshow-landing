@@ -1,5 +1,30 @@
 const GITHUB_API_BASE_URL = "https://api.github.com/users/";
 
+const updateUser = (user) => {
+  const resultsContainer = document.getElementById("search-results");
+  resultsContainer.innerHTML = "";
+  let userProfile = document.importNode(document.getElementById("user"), true);
+  resultsContainer.appendChild(userProfile.content);
+
+  document.getElementById("user-login").innerHTML = user.login;
+  user.name
+    ? (document.getElementById("user-name").innerHTML = user.name)
+    : document.getElementById("user-name").remove();
+  user.location
+    ? (document.getElementById("user-location").innerHTML = user.location)
+    : document.getElementById("user-location").remove();
+  user.followers
+    ? (document.getElementById("user-followers").innerHTML = user.followers)
+    : document.getElementById("user-followers").remove();
+};
+
+const updatePublicRepos = (repos) => {
+  document.getElementById("user-public-repos").innerHTML = "";
+  let userProfile = document.importNode(document.getElementById("user"), true);
+  document.getElementById("user-public-repos").appendChild(userProfile.content);
+
+};
+
 export default class githubService {
   constructor() {
     this.user = {};
