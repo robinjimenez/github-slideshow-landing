@@ -1,16 +1,57 @@
+html,
 body {
-    margin: 0;
+  overflow-x: hidden;
 }
 
-h1, h2 {
-    font-family: var(--header-font);
+body {
+  margin: 0;
+  position: relative;
+  transition: background-color 0.5s ease-in-out;
+  text-align: center;
 }
 
-p {
-    font-family: var(--paragraph-font);
+body[data-theme="winter"] {
+  background-color: var(--winter-bg-color);
+}
+body[data-theme="summer"] {
+  background-color: var(--summer-bg-color);
+}
+body[data-theme="autumn"] {
+  background-color: var(--autumn-bg-color);
+}
+body[data-theme="spring"] {
+  background-color: var(--spring-bg-color);
+}
+
+h1,
+h2 {
+  font-family: var(--header-font);
+}
+
+p,
+input,
+label {
+  font-family: var(--paragraph-font);
 }
 
 button {
-    border: none;
-    cursor: pointer;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+fieldset {
+  padding: 0;
+  border: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
 }

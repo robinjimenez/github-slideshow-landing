@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@900&family=Open+Sans&display=swap');
 
 :root {
-    --winter-bg-color: rgb(161, 204, 230);
+    --winter-bg-color: rgb(191, 216, 231);
     --winter-primary-shadow: rgba(34, 135, 197, 0.26);
     --winter-primary-color: rgb(34, 135, 197);
 
-    --summer-bg-color: rgb(242, 243, 192);
+    --summer-bg-color: rgb(238, 238, 217);
     --summer-primary-shadow: rgba(233, 205, 44, 0.26);
     --summer-primary-color: rgb(233, 205, 44);
 
-    --autumn-bg-color: rgb(214, 192, 166);
+    --autumn-bg-color: rgb(219, 210, 198);
     --autumn-primary-shadow: rgba(105, 73, 32, 0.26);
     --autumn-primary-color: rgb(105, 73, 32);
 
-    --spring-bg-color: rgb(175, 226, 192);
+    --spring-bg-color: rgb(202, 228, 217);
     --spring-primary-shadow: rgba(101, 163, 104, 0.26);
     --spring-primary-color: rgb(101, 163, 104);
 

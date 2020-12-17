@@ -1,13 +1,38 @@
+section {
+    position: relative;
+}
+
 .slide__container {
     position: relative;
-    display: block;
-    overflow-x: scroll;
+    padding: 0 5em 10vh;
+    display: grid;
+    grid-template-rows: auto;
+    max-width: 800px;
+    margin: auto;
 }
 
 .card__container {
-    margin: 5%;
-    padding: 10%;
+    padding: 2em;
     text-align: center;
     border-radius: 2em;
-    box-shadow: 5px 5px 14px 0 var(--winter-primary-shadow)
+    box-shadow: 5px 5px 14px 0 rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 0 2em 5em;
+    position: relative;
+}
+
+#github-section {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    .slide__container {
+        padding: 0 5em;
+    }
+
+    .card__container {
+        min-width: 0;
+        margin: 1em 2em 5em;
+    }
 }

@@ -3,26 +3,35 @@ const GITHUB_API_BASE_URL = "https://api.github.com/users/";
 const updateUser = (user) => {
   const resultsContainer = document.getElementById("search-results");
   resultsContainer.innerHTML = "";
-  let userProfile = document.importNode(document.getElementById("user"), true);
-  resultsContainer.appendChild(userProfile.content);
+  let userProfile = document.importNode(document.getElementById("user"), true)
+    .content;
 
-  document.getElementById("user-login").innerHTML = user.login;
+  userProfile.querySelector("#user-login").innerHTML = user.login;
   user.name
-    ? (document.getElementById("user-name").innerHTML = user.name)
-    : document.getElementById("user-name").remove();
+    ? (userProfile.querySelector("#user-name").innerHTML = user.name)
+    : userProfile.querySelector("#user-name").remove();
   user.location
-    ? (document.getElementById("user-location").innerHTML = user.location)
-    : document.getElementById("user-location").remove();
+    ? (userProfile.querySelector("#user-location").innerHTML = "based in " + user.location)
+    : userProfile.querySelector("#user-location").remove();
   user.followers
-    ? (document.getElementById("user-followers").innerHTML = user.followers)
-    : document.getElementById("user-followers").remove();
+    ? (userProfile.querySelector("#user-followers").innerHTML = "Followers: " + user.followers)
+    : userProfile.querySelector("#user-followers").remove();
+  resultsContainer.appendChild(userProfile);
 };
 
 const updatePublicRepos = (repos) => {
   document.getElementById("user-public-repos").innerHTML = "";
-  let userProfile = document.importNode(document.getElementById("user"), true);
-  document.getElementById("user-public-repos").appendChild(userProfile.content);
-
+  repos.map((repo) => {
+    let template = document.importNode(
+      document.getElementById("public-repo"),
+      true
+    ).content;
+    template.querySelector(".repo-details").id = "repo-" + repo.id;
+    template.querySelector(".repo-name").innerHTML = repo.name;
+    template.querySelector(".repo-name").href = repo.html_url;
+    template.querySelector(".repo-forks").innerHTML = "Forks: " + repo.forks;
+    document.getElementById("user-public-repos").appendChild(template);
+  });
 };
 
 export default class githubService {
