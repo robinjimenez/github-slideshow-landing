@@ -26,6 +26,8 @@ section {
     justify-content: center;
 }
 
+/* MOBILE */
+
 @media screen and (max-width: 600px) {
     .slide__container {
         padding: 0 3em;

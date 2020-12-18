@@ -2,6 +2,8 @@
     margin: 2em 0 0;
 }
 
+/* SLIDESHOW */
+
 #slideshow {
     cursor: none;
     overflow: hidden;
@@ -87,6 +89,8 @@
     margin: 0;
 }
 
+/* GITHUB SEARCH */
+
 #github-search {
     display: grid;
     row-gap: 1em;
@@ -132,7 +136,6 @@
     transition: all 0.5s ease-in-out;
 }
 
-
 .text-input__input {
     position: relative;
     font-size: 1em;
@@ -143,7 +146,6 @@
     width: 100%;
     transition: all 0.5s ease-in-out;
 }
-
 
 .text-input__input--focused {
     padding-top: 1.2em;
@@ -177,6 +179,7 @@ button {
     color: rgb(126, 21, 21);
 }
 
+/* USER PROFILE */
 
 .user-profile {
     display: grid;
@@ -231,10 +234,11 @@ button {
     max-height: 30vh;
     overflow-y: scroll;
     overflow-x: hidden;
-
     display: flex;
     flex-direction: column;
 }
+
+/* REPO LIST */
 
 .repo-details {
     padding: 0.5em;
@@ -252,7 +256,6 @@ button {
     border: none;
 }
 
-
 .repo-name {
     display: inline-block;
     margin-right: 1em;
@@ -266,21 +269,13 @@ button {
     margin: 0;
 }
 
+/* MOBILE */
+
 @media screen and (max-width: 600px) {
 
     #search-form  {
         font-size: 1em;
     }
-
-    /*.text-input__input {
-        border-radius: 0.75em 0.75em 0 0;
-    }
-
-    button {
-        padding: 1em 2em;
-        border-radius: 0 0 0.75em 0.75em;
-        width: 91%;
-    }*/
 
     .search-icon {
         height: 1.5em;
@@ -306,9 +301,6 @@ button {
     
     #user-followers {
         align-self: center;
-    }
-
-    #user-public-repos {
     }
 
     .repo-details {
