@@ -223,6 +223,9 @@ button {
     grid-column: 1 / span 2;
     width: 100%;
     margin: 0;
+    max-height: 30vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .repo-details {
