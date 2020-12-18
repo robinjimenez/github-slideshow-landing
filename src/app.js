@@ -6,6 +6,7 @@ import githubService from './githubService.js';
 
 const github = new githubService();
 
+
 document.querySelector('#search-form').addEventListener("submit", (e) => {
     e.preventDefault(true);
     github.fetchUser(document.querySelector('#username').value);
@@ -57,6 +58,11 @@ document.querySelector('.slide__container').addEventListener("mouseenter", (e) =
 document.querySelector('.slide__container').addEventListener("mouseleave", () => {
     document.querySelector("#slideshow-cursor").style.opacity = 0;
 });
+
+if (document.querySelector('#username').value !== "") {
+    document.querySelector("#search-form label").classList.add("text-input__label--small");
+    document.querySelector("#username").classList.add("text-input__input--focused");
+}
 
 document.querySelector('#username').addEventListener("focusin", () => {
     document.querySelector("#search-form label").classList.add("text-input__label--small");
