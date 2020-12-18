@@ -41,7 +41,8 @@ h2 {
 h3,
 p,
 input,
-label {
+label,
+ul {
   font-family: var(--paragraph-font);
   color: var(--almost-black-color);
 }

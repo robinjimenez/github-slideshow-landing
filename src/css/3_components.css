@@ -109,7 +109,8 @@
     position: relative;
     margin: 0;
     display: inline-block;
-    grid-column: 1;    
+    grid-column: 1;
+    overflow: hidden;    
 }
 
 .text-input__label {
