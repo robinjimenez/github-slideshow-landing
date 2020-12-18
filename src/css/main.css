@@ -1,3 +1,5 @@
+/* A simplified ITCSS-inspired CSS structure */
+
 @import '0_global.css';
 @import '1_generic.css';
 @import '2_layout.css';
