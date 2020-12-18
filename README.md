@@ -11,5 +11,6 @@ To start the server, simply run `node start` and open `localhost:3000' on your f
 - Mobile slider nav could have buttons or icons.
 
 ### Attribution
-Images provided by Unsplash.
+Images provided by Unsplash: https://unsplash.com
+
 Icons provided by Font Awesome, licensed under CC Attribution: https://fontawesome.com/license
