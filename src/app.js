@@ -73,7 +73,7 @@ document.querySelector('.slide__container').addEventListener("mousemove", (e) =>
     requestAnimationFrame(render);
 });
 
-document.querySelector('.slide__container').addEventListener("mouseenter", (e) => {
+document.querySelector('.slide__container').addEventListener("mouseenter", () => {
     document.querySelector("#slideshow-cursor").style.opacity = 1;
 });
 

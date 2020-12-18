@@ -1,0 +1,22 @@
+{
+  "name": "github-slideshow-landing",
+  "version": "1.0.0",
+  "description": "Just a simple plain CSS and JS slider and a Github user search.",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robinjimenez/github-slideshow-landing.git"
+  },
+  "author": "Robin Jiménez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robinjimenez/github-slideshow-landing/issues"
+  },
+  "homepage": "https://github.com/robinjimenez/github-slideshow-landing#readme",
+  "devDependencies": {
+    "eslint": "^7.15.0"
+  }
+}
