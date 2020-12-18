@@ -26,12 +26,14 @@ body[data-theme="spring"] {
 h1,
 h2 {
   font-family: var(--header-font);
+  color: var(--almost-black-color);
 }
 
 p,
 input,
 label {
   font-family: var(--paragraph-font);
+  color: var(--almost-black-color);
 }
 
 button {
@@ -54,4 +56,10 @@ select:focus,
 textarea:focus,
 button:focus {
   outline: none;
+}
+
+@media screen and (max-width: 300px) {
+    body {
+        transform: scale(10vw);
+    }
 }

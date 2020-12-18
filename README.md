@@ -8,6 +8,7 @@ To start the server, simply run `node start` and open `localhost:3000' on your f
 - TODO: Form validation
 - Blur effect on slider info panel has limited support.
 - Slider cursor doesn't follow mouse on scroll.
+- Mobile slider nav could have buttons or icons.
 
 ### Attribution
 Images provided by Unsplash.

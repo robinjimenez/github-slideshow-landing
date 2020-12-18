@@ -3,20 +3,20 @@ const GITHUB_API_BASE_URL = "https://api.github.com/users/";
 const updateUser = (user) => {
   const resultsContainer = document.getElementById("search-results");
   resultsContainer.innerHTML = "";
-  let userProfile = document.importNode(document.getElementById("user"), true)
-    .content;
+    let userProfile = document.importNode(document.getElementById("user"), true)
+        .content;
 
-  userProfile.querySelector("#user-login").innerHTML = user.login;
-  user.name
-    ? (userProfile.querySelector("#user-name").innerHTML = user.name)
-    : userProfile.querySelector("#user-name").remove();
-  user.location
-    ? (userProfile.querySelector("#user-location").innerHTML = "based in " + user.location)
-    : userProfile.querySelector("#user-location").remove();
-  user.followers
-    ? (userProfile.querySelector("#user-followers").innerHTML = "Followers: " + user.followers)
-    : userProfile.querySelector("#user-followers").remove();
-  resultsContainer.appendChild(userProfile);
+    userProfile.querySelector("#user-login").innerHTML = user.login;
+    user.name
+        ? (userProfile.querySelector("#user-name").innerHTML = user.name)
+        : userProfile.querySelector("#user-name").remove();
+    user.location
+        ? (userProfile.querySelector("#user-location").innerHTML = "based in " + user.location)
+        : userProfile.querySelector("#user-location").remove();
+    user.followers
+        ? (userProfile.querySelector("#user-followers").innerHTML = "Followers: " + user.followers)
+        : userProfile.querySelector("#user-followers").remove();
+    resultsContainer.appendChild(userProfile);
 };
 
 const updatePublicRepos = (repos) => {

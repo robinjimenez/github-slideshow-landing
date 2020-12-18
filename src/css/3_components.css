@@ -89,7 +89,6 @@
 
 #github-search {
     display: grid;
-    grid-template-rows: auto minmax(10em, 1fr);
     row-gap: 1em;
     position: relative;
     background-color: white;
