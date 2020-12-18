@@ -12,4 +12,4 @@ To start the server, simply run `node start` and open `localhost:3000' on your f
 
 ### Attribution
 Images provided by Unsplash.
-Icons provided by Font Awesome.
+Icons provided by Font Awesome, licensed under CC Attribution: https://fontawesome.com/license
