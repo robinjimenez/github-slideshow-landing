@@ -16,6 +16,8 @@ const updateUser = (user) => {
     user.followers
         ? (userProfile.querySelector("#user-followers").innerHTML = "Followers: " + user.followers)
         : userProfile.querySelector("#user-followers").remove();
+    if (user.public_repos < 1) userProfile.querySelector(".user-public-repos__title").innerHTML = "User has no public repositories"
+      
     resultsContainer.appendChild(userProfile);
 };
 
@@ -73,14 +75,15 @@ export default class githubService {
           showError(`No users named "${username}" found!`);
         } else {
           this.status = "OK";
-          this.user = (({ name, login, location, avatar_url, followers }) => ({
+          this.user = (({ name, login, location, avatar_url, followers, public_repos }) => ({
             name,
             login,
             location,
             avatar: avatar_url,
             followers,
+            public_repos
           }))(data);
-          if (data.public_repos > 0) {
+          if (this.user.public_repos > 0) {
             this.fetchUserPublicRepos(username);
           }
           updateUser(this.user);
