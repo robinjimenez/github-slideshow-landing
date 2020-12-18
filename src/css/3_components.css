@@ -94,6 +94,7 @@
     position: relative;
     background-color: white;
     justify-items: center;
+    flex-grow: 1;
 }
 
 #search-form  {
@@ -168,9 +169,13 @@ button {
     text-align: center;
 }
 
+.github-search__message--error {
+    color: rgb(126, 21, 21);
+}
+
+
 .user-profile {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50%,1fr));
     justify-items: center;
     align-items: center;
 }

@@ -34,6 +34,11 @@ const updatePublicRepos = (repos) => {
   });
 };
 
+const showError = (message) => {
+    const resultsContainer = document.getElementById("search-results");
+    resultsContainer.innerHTML = `<p class="github-search__message github-search__message--error">${message}</p>`
+}
+
 export default class githubService {
   constructor() {
     this.user = {};
@@ -65,7 +70,7 @@ export default class githubService {
         if (data.message == "Not Found") {
           this.status = "NO_USER_ERR";
           this.user = {};
-          throw new Error("No users found");
+          showError(`No users named "${username}" found!`);
         } else {
           this.status = "OK";
           this.user = (({ name, login, location, avatar_url, followers }) => ({
@@ -78,12 +83,13 @@ export default class githubService {
           if (data.public_repos > 0) {
             this.fetchUserPublicRepos(username);
           }
+          updateUser(this.user);
         }
-        updateUser(this.user);
       })
       .catch((error) => {
         console.log("error " + error.message);
         this.status = "NETWORK_ERR";
+        showError(`Oops, we're having trouble searching for "${username}". <br> Please try again later.`);
       });
   };
 }
