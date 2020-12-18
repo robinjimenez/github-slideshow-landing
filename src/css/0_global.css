@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@900&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;800&family=Open+Sans&display=swap');
 
 :root {
     --winter-bg-color: rgb(191, 216, 231);
@@ -11,6 +11,6 @@
 
     --almost-black-color: rgb(50, 50, 50);
 
-    --header-font: 'Bitter', serif;
+    --header-font: 'JetBrains Mono', serif;
     --paragraph-font: 'Open Sans', sans-serif;
 }

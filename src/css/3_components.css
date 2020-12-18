@@ -182,7 +182,7 @@ button {
     display: grid;
     justify-items: center;
     align-items: center;
-    column-gap: 0.5em;
+    column-gap: 1.5em;
 }
 
 #user-login {
@@ -231,6 +231,9 @@ button {
     max-height: 30vh;
     overflow-y: scroll;
     overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .repo-details {
@@ -303,6 +306,9 @@ button {
     
     #user-followers {
         align-self: center;
+    }
+
+    #user-public-repos {
     }
 
     .repo-details {

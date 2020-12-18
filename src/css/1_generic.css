@@ -36,9 +36,14 @@ h1,
 h2 {
   font-family: var(--header-font);
   color: var(--almost-black-color);
+  font-weight: 800;
 }
 
-h3,
+h3 {
+   font-family: var(--header-font);
+   font-weight: 600;
+}
+
 p,
 input,
 label,
